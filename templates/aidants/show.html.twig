@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+<title>{% block title %}page article choisi{% endblock %}</title>
+
+<body>
+    {% block body %}
+        {% for article in articles %}
+        <h1>{{article.title}}</h1>
+        <h2>Écrit par : {{article.author}} le {{article.created_at | date}}</h2> 
+        <p>
+            {{article.content}}
+        </p>
+            <span>Modifié le : {{article.updated_at | date}}</span>
+        {% endfor %}
+    {% endblock %}
+</body>
