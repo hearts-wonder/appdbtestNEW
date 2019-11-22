@@ -16,10 +16,7 @@ class PatientsController extends AbstractController
     public function index()
     {
         return $this->render('patients/articles.html.twig' ,[
-            'theme' => $theme,
-            'img' => $img,
-            'created_at' => $createdAt,
-            'updated_at' => $updatedAt,
+        
         ]);
     }
 
